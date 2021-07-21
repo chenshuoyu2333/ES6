@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr=[1,2,3];
+    // a=arr[1];
+    // b=arr[2];
+    // c=arr[3];
+
+    // 在ES6中，=左右代表的不是数组，而是解构赋值符
+    // let [a,b,c]=arr;
+    // console.log(a,b,c);
+
+    let obj={
+        color:'red',
+        age:'18',
+    }
+    // 在ES6中，=左边{}代表的不是对象，而是解构赋值符
+    // let  color=obj.color
+    // console.log(color)
+
+        let {age,color:aaa}= obj;
+    console.log(aaa,age);
+
+
+
+</script>
+
+
+</body>
+</html>

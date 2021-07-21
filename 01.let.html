@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>let</title>
+</head>
+<body>
+<script>
+  <!--      var能重复声明，let不行-->
+              // var a= 1;
+              // var a= 2;
+              // console.log(a);
+              // let  b=1;
+              // let  b=2;
+              // console.log(b)
+
+        // 函数局部作用域
+        //   function fn(){
+        //      var    a=1;
+        //   }
+        //
+        //   console.log(a);
+
+
+  // for 没有自己的作用域，但是在ES6使用let就可以创建块级作用域
+        // for (var i=0;i<10;i++){
+        //
+        //       console.log(i);
+        //       var a=2
+        // }
+        //console.log(i);
+
+
+        // for (let i=0;i<10;i++){
+        //
+        //       console.log(i);
+        //       let a=2
+        // }
+        // if(ture){
+        // let b=3;
+        //
+        // }
+
+
+          // console.log(i);
+          // console.log(a);
+          // console.log(b);
+
+        // 3.ES5变量提升,函数也会提升;ES6变量不会提升,函数会提升
+        //   console.log(a);
+        //   var a;
+
+            // fn();
+            //   function  fn(){
+            //       console.log(2);
+            //   }
+
+              //   console.log(a);
+              //   let a;
+
+
+</script>
+
+
+</body>
+</html>
