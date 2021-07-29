@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Symbol</title>
+</head>
+<body>
+
+</body>
+<script>
+    let sym = Symbol()
+    console.log( typeof sym)
+    let str =new String()
+    console.log( typeof str)
+    //Symbol()不能与new一起使用
+    let sym1 =new Symbol()//TypeError: Symbol is not a constructor
+    console.log( typeof sym1)
+
+</script>
+</html>
+
