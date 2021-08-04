@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>立即执行函数</title>
+</head>
+<body>
+<script>
+        function Dog() {
+
+        }
+        let dog = new Dog()
+        ;(function (){
+      alert("我是一个匿名函数")
+    })()
+    // 立即执行函数，只执行一次
+    ;(function (a,b){
+        console.log("a="+a)
+        console.log("b="+b)
+    })(123,456)
+
+</script>
+</body>
+</html>
