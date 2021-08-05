@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组的剩余方法</title>
+</head>
+<body>
+<script>
+  // concat()连接两个或更多的数组或者是参数，并返回结果,不会对原数组造成影响。
+
+    let arr = [1,2,11,3,8,4,5]
+    let arr2 = ['孙悟空','猪八戒','沙和尚']
+    let result = arr.concat(arr2,'牛魔王')
+    console.log(result)
+  // join()把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔,不会对原数组造成影响。
+    let result2= arr2.join('-')
+     console.log(result2)
+    //reverse()颠倒数组中元素的顺序,会对原数组造成影响。
+      arr2.reverse();
+      console.log(arr2)
+    // sort()对数组的元素以unicode编码的方式进行排序,会改变原本数组,可以自己制定排序的规则，即写一个回调函数
+          /*
+          浏览器会根据回调函数的返回值进行交换顺序
+          * 返回值大于0，交换顺序
+          * 返回值等于或小于0，顺序不变
+          * */
+      result3 = arr.sort(function (a,b) {
+        return a-b
+      })
+  console.log(arr)
+
+</script>
+
+</body>
+</html>

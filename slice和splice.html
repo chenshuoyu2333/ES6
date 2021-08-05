@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr = ['孙悟空','猪八戒','沙和尚','白骨精']
+  // slice() 截取数组的元素，并返回该元素，不对原数组造成影响
+  /*索引
+  *   1. 截取数组的开始位置，包含当前位置
+  *   2. 截取数组的结束位置，不包含当前位置
+  * */
+  let result = arr.slice(1,2)
+  console.log(result)
+  // splice() 删除数组的元素，并向数组添加新的元素，会对原数组造成影响
+  /*索引
+  *   1. 删除数组元素的开始位置，包含当前位置
+  *   2. 删除数组元素的个数，包含当前下标
+  *   3及以后可在开始位置之前添加新的元素
+  *   索引可以为负值，表示从数组最后一位开始算起
+  * */
+  let result2 = arr.splice(1,2,'唐僧')
+  console.log(result2)
+  console.log(arr)
+</script>
+
+</body>
+</html>
