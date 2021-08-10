@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>坐标</title>
+  <style>
+    * {
+      margin: 0;
+    }
+   #table{
+      width: 500px;
+      height: 200px;
+      border: black solid 1px;
+
+     padding-bottom: 10px;
+    }
+   #show{
+     width: 500px;
+     height: 100px;
+     border: black solid 1px;
+   }
+  </style>
+  <script>
+    window.onload = function () {
+      let tab = document.getElementById('table')
+      let sh = document.getElementById('show')
+
+      tab.onmousemove= function (e) {
+        let x = e.pageX
+        let y = e.pageY
+        sh.innerHTML=`x=${x},y=${y}`
+    }
+
+    }
+  </script>
+</head>
+<body>
+    <div id="table">
+
+    </div>
+    <div id="show">
+
+    </div>
+
+</body>
+</html>
