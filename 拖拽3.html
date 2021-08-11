@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽3</title>
+  <style>
+    * {margin: 0}
+    div{
+      width: 100px;
+      height: 100px;
+      position: absolute;
+    }
+    #box1{
+      background: #000;
+
+    }
+    #box2{
+      background: red;
+      left: 300px;
+      top: 300px;
+    }
+  </style>
+  <script>
+          window.onload = function () {
+                  let b1 =document.getElementById('box1')
+                  let b2 = document.getElementById('box2')
+
+                  function drag(obj) {
+
+                      obj.onmousedown =function (e) {  console.log(e)
+                        e = e || window.e;
+
+
+                            let ol = e.clientX-obj.offsetLeft
+
+                            let ot = e.clientY-obj.offsetTop
+                          document.onmousemove = function (e) {
+                            e = e || window.e;
+                                let top =e.clientY -ot
+                                let left=e.clientX-ol
+                                obj.style.top=top +'px'
+                                obj.style.left=left+'px'
+                          }
+
+                      }
+
+                      obj.onmouseup = function () {
+                        document.onmousedown= null
+                        document.onmousemove = null
+                        b1.releaseCapture && b1.releaseCapture();
+                      }
+                      return false
+
+                  }
+                  drag(b1)
+                  drag(b2)
+
+          }
+  </script>
+</head>
+<body>
+    <p>我是一段文字</p>
+    <div id="box1"></div>
+    <div id="box2"></div>
+
+</body>
+</html>
